@@ -1,0 +1,8 @@
+[
+  {
+    "title": "camisa niño",
+    "price": 320,
+    "thumbnail": "https://offcorss.vteximg.com.br/arquivos/ids/744125-460-540/51048651-Azul-13-4404_1.jpg?v=637844236663900000",
+    "id": 2
+  }
+]
