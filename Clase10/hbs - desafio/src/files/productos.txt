@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "camisa",
+    "price": "765",
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_990732-MCO31098832042_062019-W.jpg"
+  },
+  {
+    "id": 2,
+    "title": "pantalon",
+    "price": "345",
+    "thumbnail": "https://static.pullandbear.net/2/photos/2022/I/0/2/p/4674/512/707/4674512707_1_1_3.jpg?t=1661762393553"
+  }
+]
