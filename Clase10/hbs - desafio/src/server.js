@@ -73,6 +73,8 @@ app.get('/people', (req, res) => {
 app.post("/products",async(req,res)=>{
     //obtengo la info del formulario, y la guardo en una variable
     const newProduct = req.body;
+    // guardamos el nuevo producto
     await productsService.save(newProduct);
+    //despues de guardar exitosamente, redireccionamos a la pagina principal.
     res.redirect("/");
 })
