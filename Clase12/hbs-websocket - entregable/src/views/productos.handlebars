@@ -1,0 +1,10 @@
+<div>
+    <h2>Pagina de productos</h2>
+    {{#each productos}}
+        <div>
+            <p>{{this.title}}</p>
+            <p>{{this.price}}</p>
+            <img width="100" src={{this.thumbnail}}/>
+        </div>
+    {{/each}}
+</div>
