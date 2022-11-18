@@ -1,0 +1,50 @@
+Router productos:
+1. get  /  lista todos los productos
+2. get /:id  informacion de un producto
+3. post / agregar un producto al listado de productos
+post /api/productos/
+body{
+    title:,
+    price,
+    thumbnail
+}
+4. put /api/productos ->actualizar un producto del listado de productos
+put /api/productos/:id
+body{
+    id:1,
+    title:,
+    price:,
+    thumbnail
+}
+5. delete /api/productos/:id ->elimina un producto del listado de productos.
+
+let isAdmin = false;
+
+if(isAdmin = true){
+    next()
+} else {
+    res.send("No tienes permisos)
+}
+
+app.post("/:id",verificaAdmin, (req,res)=>{
+    res.send("productos)
+})
+
+
+Router Carrito
+1. POST: '/' - Crea un carrito y devuelve su id.
+
+2. DELETE: '/:id' - Elimina por id del carrito.
+
+        /id del carrito
+3. GET: '/:id/productos' - Me permite listar todos los productos guardados en el carrito.
+
+        id del carrito
+4. POST: '/:id/productos' - Para incorporar productos al carrito por su id de producto.
+body{
+    id:8 ->id del producto
+}
+
+        id del carrito
+5. DELETE: '/:id/productos/:id_prod' - elimina un producto del carrito.
+id_Prod- id del producto

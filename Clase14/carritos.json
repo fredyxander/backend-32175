@@ -1,0 +1,12 @@
+[
+    {
+        "id":1,
+        "timestamp": "12/10/2022",
+        "products":[]
+    },
+    {
+        "id":2,
+        "timestamp": "12/10/2022",
+        "products":[ 4, 6]
+    }
+]
