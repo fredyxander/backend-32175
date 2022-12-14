@@ -1,0 +1,14 @@
+/firebase
+let users = [
+        {nombre:"Pedro", dni:981723},
+        {nombre:"Juan", dni:2346234},
+        {nombre:"Lucas", dni:34534535},
+];
+
+//mongo atlas
+const users = [
+    { nombre: 'Lucas', apellido: 'Blanco', dni: '30355874' },
+    { nombre: 'María', apellido: 'García', dni: '29575148' },
+    { nombre: 'Tomas', apellido: 'Sierra', dni: '38654790' },
+    { nombre: 'Carlos', apellido: 'Fernández', dni: '26935670' }
+]
