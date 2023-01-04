@@ -1,0 +1,47 @@
+app.get("/login",(req,res)=>{
+    const {nombre} = req.query;
+    if(req.session.username){ //si ya esta logueado redirige al home
+        return res.send("ya estás logueado");
+    }
+    //si no esta logueado
+    if(nombre){ //si envía el nombre se loguea y crea sesión para este usuario
+        req.session.username = nombre;
+        req.session.login=true;
+        console.log(req.session)
+        res.send("login exitoso!");
+    } else{
+        res.send("Por favor ingresar nombre de usuario")
+    }
+})
+
+
+app.get("/home", (req,res)=>{
+    console.log("home",req.session)
+    if(req.session.username){
+        let user = req.session.username;
+        if(req.session.visitas){
+            req.session.visitas++;
+        } else{
+            req.session.visitas = 1;
+        }
+        let visitas = req.session.visitas;
+        res.send(`Bienvenido ${user}, has visitado este sitio ${visitas} veces`);
+    } else{
+        res.redirect("/login")
+    }
+});
+
+app.get("/reset",(req,res)=>{
+    req.session.visitas=0;
+    res.send("de nuevo")
+})
+
+app.get("/logout", (req,res)=>{
+    req.session.destroy(error=>{
+        if(!error) return res.send("logout exitoso")
+        res.send(`Error:${error}`).status(500)
+    })
+});
+
+Redis:
+https://github.com/microsoftarchive/redis/releases/tag/win-2.8.2104
