@@ -1,0 +1,18 @@
+npm i -g pm2
+//ejecutar el servidor en modo fork con pm2
+pm2 start server.js --name="Servidor1" -- 8081
+
+//ejecutar el servidor en modo cluster en el puerto 8082
+pm2 start server.js --name="Servidor2" -i max -- 8082
+
+//reload de los servidores que se estan ejecutando con pm2
+pm2 update
+
+//listar procesos con pm2
+pm2 list
+
+//eliminar procesos con pm2
+pm2 delete all
+
+//reiniciar el servidor proxy de nginx
+./nginx.exe -s reload

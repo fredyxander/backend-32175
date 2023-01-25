@@ -1,0 +1,4 @@
+2023/01/24 18:49:45 [error] 19796#16928: *6 CreateFile() "E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase30\proxy_inverso\nginx/../Servidor-backend/public/perfil" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /perfil HTTP/1.1", host: "localhost:81"
+2023/01/24 18:50:41 [notice] 17840#24352: signal process started
+2023/01/24 18:54:16 [notice] 11372#4580: signal process started
+2023/01/24 18:57:27 [notice] 20460#18424: signal process started
