@@ -1,0 +1,7 @@
+[2023-01-26T18:07:19.991] [WARN] default - imprimendo nivel warn
+[2023-01-26T18:07:19.998] [ERROR] default - imprimendo nivel error
+[2023-01-26T18:07:19.998] [FATAL] default - imprimendo nivel fatal
+[2023-01-26T18:07:49.873] [FATAL] default - imprimendo nivel fatal
+[2023-01-26T18:07:49.877] [WARN] default - imprimendo nivel warn
+[2023-01-26T18:07:49.878] [ERROR] default - imprimendo nivel error
+[2023-01-26T18:07:49.879] [FATAL] default - imprimendo nivel fatal
