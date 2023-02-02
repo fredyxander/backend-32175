@@ -1,0 +1,217 @@
+Statistical profiling result from isolate-nobloq.log, (27986 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  27379   97.8%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    585    2.1%          C:\Program Files\nodejs\node.exe
+      1    0.0%          C:\WINDOWS\System32\WS2_32.dll
+      1    0.0%          C:\WINDOWS\System32\KERNEL32.DLL
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.0%   10.0%  Function: ^getHighWaterMark node:internal/streams/state:19:26
+      1    0.0%    5.0%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      1    0.0%    5.0%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      1    0.0%    5.0%  Function: ^removeListener node:events:557:28
+      1    0.0%    5.0%  Function: ^parserOnHeadersComplete node:_http_common:77:33
+      1    0.0%    5.0%  Function: ^normalizeString node:path:66:25
+      1    0.0%    5.0%  Function: ^nextTick node:internal/process/task_queues:104:18
+      1    0.0%    5.0%  Function: ^module.exports E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\qs\lib\parse.js:239:27
+      1    0.0%    5.0%  Function: ^handle E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\layer.js:86:49
+      1    0.0%    5.0%  Function: ^get node:internal/streams/writable:783:8
+      1    0.0%    5.0%  Function: ^fromString node:buffer:431:20
+      1    0.0%    5.0%  Function: ^finishMaybe node:internal/streams/writable:727:21
+      1    0.0%    5.0%  Function: ^app E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\express.js:38:21
+      1    0.0%    5.0%  Function: ^addListener node:events:486:58
+      1    0.0%    5.0%  Function: ^_storeHeader node:_http_outgoing:374:22
+      1    0.0%    5.0%  Function: ^Timeout node:internal/timers:167:17
+      1    0.0%    5.0%  Function: ^Readable node:internal/streams/readable:181:18
+      1    0.0%    5.0%  Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    0.0%    5.0%  Function: ^Module._nodeModulePaths node:internal/modules/cjs/loader:583:37
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     20    0.1%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     20    0.1%  100.0%  GC
+  27966   99.9%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  27379   97.8%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+    585    2.1%  C:\Program Files\nodejs\node.exe
+    405   69.2%    C:\Program Files\nodejs\node.exe
+     47   11.6%      Function: ^compileFunction node:vm:308:25
+     43   91.5%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     43  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+     25   58.1%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     18   41.9%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      4    8.5%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      4  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      4  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     45   11.1%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     41   91.1%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      6   14.6%          Function: ~<anonymous> node:http:1:1
+      6  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5   12.2%          Function: ~<anonymous> node:crypto:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    7.3%          Function: ~<anonymous> node:tty:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    7.3%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    7.3%          Function: ~<anonymous> node:_http_client:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.9%          LazyCompile: ~lazyLoadStreams node:fs:2841:25
+      2  100.0%            LazyCompile: ~get ReadStream node:fs:2984:17
+      2    4.9%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.9%          Function: ~<anonymous> node:internal/child_process:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.9%          Function: ~<anonymous> node:child_process:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.9%          Function: ~<anonymous> node:_http_common:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.4%          LazyCompile: ~listenInCluster node:net:1372:25
+      1  100.0%            LazyCompile: ~Server.listen node:net:1414:35
+      1    2.4%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1  100.0%            LazyCompile: ~get node:crypto:287:8
+      1    2.4%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:63:28
+      1  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:168:60
+      1    2.4%          LazyCompile: ~getColorDepth node:internal/tty:106:23
+      1  100.0%            LazyCompile: ~value node:internal/console/constructor:299:20
+      1    2.4%          LazyCompile: ~get BlockList node:net:1779:16
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1    2.4%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.4%          Function: ~<anonymous> node:internal/cluster/round_robin_handle:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.4%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.4%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.4%          Function: ~<anonymous> node:_http_server:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.4%          Function: ~<anonymous> node:_http_outgoing:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.4%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      2  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1   50.0%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:270:58
+      1   50.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      2    4.4%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      2  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+     36    8.9%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+     36  100.0%        LazyCompile: ~<anonymous> file:///E:/Coderhouse/Backend-Nodejs/Backend-32175/Clase32/profiler-explicacion/src/server.js:15:21
+     36  100.0%          LazyCompile: ~handle E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\layer.js:86:49
+     36  100.0%            LazyCompile: ~next E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\route.js:116:16
+     33    8.1%      Function: ^writevGeneric node:internal/stream_base_commons:126:23
+     32   97.0%        Function: ^Socket._writeGeneric node:net:769:42
+     32  100.0%          Function: ^Socket._writev node:net:801:36
+     32  100.0%            Function: ^doWrite node:internal/streams/writable:398:17
+      1    3.0%        LazyCompile: ~Socket._writeGeneric node:net:769:42
+      1  100.0%          LazyCompile: ~Socket._writev node:net:801:36
+      1  100.0%            LazyCompile: ~doWrite node:internal/streams/writable:398:17
+     18    4.4%      Function: ^stat node:internal/modules/cjs/loader:151:14
+     11   61.1%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      8   72.7%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      8  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      3   27.3%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2   66.7%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   33.3%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      6   33.3%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      6  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      6  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1    5.6%        LazyCompile: ~tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%          LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:400:23
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+     15    3.7%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     15  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      3   20.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2   13.3%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:422:29
+      2  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      2   13.3%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2   13.3%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    6.7%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:461:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      1    6.7%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    6.7%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    6.7%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    6.7%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    6.7%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     12    3.0%      Function: ^realpathSync node:fs:2408:22
+     12  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+     11   91.7%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      9   81.8%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1    9.1%            LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:939:31
+      1    9.1%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1    8.3%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+     12    3.0%      C:\Program Files\nodejs\node.exe
+      2   16.7%        Function: ^toNamespacedPath node:path:618:19
+      1   50.0%          Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1   50.0%          Function: ^openSync node:fs:576:18
+      1  100.0%            Function: ^readFileSync node:fs:450:22
+      2   16.7%        Function: ^header E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\response.js:777:29
+      2  100.0%          Function: ^contentType E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\response.js:619:32
+      2  100.0%            Function: ^sendStatus E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\response.js:369:37
+      1    8.3%        LazyCompile: ~populateMaps E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\mime-types\index.js:154:23
+      1  100.0%          Function: ~<anonymous> E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\mime-types\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    8.3%        LazyCompile: ~pathtoRegexp E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\path-to-regexp\index.js:28:22
+      1  100.0%          LazyCompile: ~Layer E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\layer.js:33:15
+      1  100.0%            LazyCompile: ~route E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\index.js:502:29
+      1    8.3%        LazyCompile: ~onParserExecuteCommon node:_http_server:690:31
+      1  100.0%          Function: ^onParserExecute node:_http_server:633:25
+      1    8.3%        Function: ^parserOnIncoming node:_http_server:852:26
+      1  100.0%          Function: ^parserOnHeadersComplete node:_http_common:77:33
+      1    8.3%        Function: ^parseQueryStringValues E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\qs\lib\parse.js:51:50
+      1  100.0%          Function: ^module.exports E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\qs\lib\parse.js:239:27
+      1  100.0%            Function: ^parseExtendedQueryString E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\utils.js:289:34
+      1    8.3%        Function: ^onParserExecuteCommon node:_http_server:690:31
+      1  100.0%          Function: ^onParserExecute node:_http_server:633:25
+      1    8.3%        Function: ^getOwn node:internal/bootstrap/loaders:180:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:287:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:273:15
+      1    8.3%        Function: ^checkInvalidHeaderChar node:_http_common:232:32
+      1  100.0%          Function: ^<anonymous> node:_http_outgoing:564:45
+      1  100.0%            Function: ^setHeader node:_http_outgoing:574:57
+      7    1.7%      Function: ^read node:internal/modules/package_json_reader:16:14
+      7  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      6   85.7%          Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      6  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   14.3%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      5    1.2%      Function: ^openSync node:fs:576:18
+      4   80.0%        Function: ^readFileSync node:fs:450:22
+      3   75.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      3  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1   25.0%          LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1158:39
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1   20.0%        LazyCompile: ~readFileSync node:fs:450:22
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      6    1.0%    Function: ^end node:_http_outgoing:833:45
+      6  100.0%      Function: ^send E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\response.js:111:25
+      6  100.0%        Function: ^sendStatus E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\response.js:369:37
+      6  100.0%          Function: ^<anonymous> file:///E:/Coderhouse/Backend-Nodejs/Backend-32175/Clase32/profiler-explicacion/src/server.js:58:25
+      6  100.0%            Function: ^handle E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\layer.js:86:49
+

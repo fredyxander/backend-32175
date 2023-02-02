@@ -1,0 +1,55 @@
+Statistical profiling result from isolate-bloq.log, (217001 ticks, 1 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  216429   99.7%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    544    0.3%          C:\Program Files\nodejs\node.exe
+      2    0.0%          C:\WINDOWS\System32\WS2_32.dll
+      2    0.0%          C:\WINDOWS\System32\KERNEL32.DLL
+      1    0.0%          C:\WINDOWS\system32\mswsock.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.0%    8.7%  LazyCompile: *resolve node:path:158:10
+      2    0.0%    8.7%  LazyCompile: *next E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\index.js:177:16
+      1    0.0%    4.3%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.0%    4.3%  RegExp: ;\s*charset\s*=
+      1    0.0%    4.3%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      1    0.0%    4.3%  Function: ^trim_prefix E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\index.js:293:23
+      1    0.0%    4.3%  Function: ^send E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\response.js:111:25
+      1    0.0%    4.3%  Function: ^remove node:internal/linkedlist:15:16
+      1    0.0%    4.3%  Function: ^process_params E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\index.js:338:47
+      1    0.0%    4.3%  Function: ^processPromiseRejections node:internal/process/promises:203:34
+      1    0.0%    4.3%  Function: ^processHeader node:_http_outgoing:501:23
+      1    0.0%    4.3%  Function: ^parserOnHeadersComplete node:_http_common:77:33
+      1    0.0%    4.3%  Function: ^nextTick node:internal/process/task_queues:104:18
+      1    0.0%    4.3%  Function: ^next E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\router\index.js:177:16
+      1    0.0%    4.3%  Function: ^isFileType node:fs:205:20
+      1    0.0%    4.3%  Function: ^header E:\Coderhouse\Backend-Nodejs\Backend-32175\Clase32\profiler-explicacion\node_modules\express\lib\response.js:777:29
+      1    0.0%    4.3%  Function: ^get node:internal/streams/readable:1200:18
+      1    0.0%    4.3%  Function: ^compileFunction node:vm:308:25
+      1    0.0%    4.3%  Function: ^_addListener node:events:418:22
+      1    0.0%    4.3%  Function: ^_addHeaderLine node:_http_incoming:337:24
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     22    0.0%   95.7%  JavaScript
+      0    0.0%    0.0%  C++
+     38    0.0%  165.2%  GC
+  216978  100.0%          Shared libraries
+      1    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  216429   99.7%  C:\WINDOWS\SYSTEM32\ntdll.dll
+

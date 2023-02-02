@@ -1,0 +1,35 @@
+{
+  "name": "entregable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js",
+    "create-tables": "node src/scripts/createTables.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.3",
+    "knex": "^2.3.0",
+    "minimist": "^1.2.7",
+    "mysql": "^2.18.1",
+    "normalizr": "^3.6.2",
+    "socket.io": "^4.5.3",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
+  }
+}
