@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
-const adminEmail = "freddy5210@gmail.com";
-const adminPassword = "bvjzmxkfpeuvzbuq";
+const adminEmail = "add admin email";
+const adminPassword = "add app gmail password";
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
