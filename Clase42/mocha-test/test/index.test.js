@@ -17,4 +17,11 @@ describe("pruebas de la clase TaskClass y sus metodos",()=>{
         //Luego comparamos el valor obtenido del codigo y el valor esperado.
         assert.strictEqual(tasks.list().length,2);
     });
+
+    it("luego de agregar una tarea, el arreglo de tareas deberia contener un objeto de tipo tarea",()=>{
+        const tasks = new TaskClass();
+        tasks.add("tarea 1");
+        //comparamos pero a un nivel de mayor profundida, generalmente valores tipo objeto.
+        assert.deepStrictEqual(tasks.list(),[{title:"tarea 1", completed:false}]);
+    });
 });
