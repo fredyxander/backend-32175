@@ -1,0 +1,23 @@
+# como se debe recibir la informacion de un usuario para metodo post
+components:
+  requestBodies:
+    NewUser:
+      type: object
+      required:
+        - nombre
+        - apellido
+        - dni
+      properties:
+        nombre:
+          type: string
+          description: "nombre del usuario"
+        apellido:
+          type: string
+          description: "apellido del usuario"
+        dni:
+          type: string
+          description: "dni del usuario"
+      example:
+        nombre: pepe
+        apellido: diaz
+        dni: 871623

@@ -1,0 +1,16 @@
+# get all users
+paths:
+  /users:
+    get:
+      summary: request to get all users from db
+      tags:
+        - Usuarios
+      responses:
+        "200":
+          description: get all users successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'

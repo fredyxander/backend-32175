@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+{{error}}
+
+{{!-- Agregar usuario --}}
+<form action="/" method="post">
+    <input type="text" placeholder="Agregar nombre" name="name"/>
+    <button type="submit">Agregar</button>
+</form>
+
+{{!-- Listado de los usuarios --}}
+{{#if users}}
+    <ul>
+        {{#each users}}
+            <li>{{this.name}}</li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>No hay usuarios agregados</p>
+{{/if}}

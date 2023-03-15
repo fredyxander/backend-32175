@@ -1,0 +1,28 @@
+# como se obtiene un usuario al hacer la peticion de tipo get
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - _id
+        - nombre
+        - apellido
+        - dni
+      properties:
+        _id:
+          type: string
+          description: "Id generado automaticamente desde la base de datos"
+        nombre:
+          type: string
+          description: "nombre del usuario"
+        apellido:
+          type: string
+          description: "apellido del usuario"
+        dni:
+          type: string
+          description: "dni del usuario"
+      example:
+        _id: kasdkjsu9812
+        nombre: pepe
+        apellido: diaz
+        dni: 871623
