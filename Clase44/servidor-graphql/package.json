@@ -1,0 +1,34 @@
+{
+  "name": "mvc-html-onwire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha src/test/user.test.js --exit",
+    "start": "node src/server.js",
+    "start-dev": "node src/server.js -e DEV",
+    "start-prod": "node src/server.js -p 3000 -m CLUSTER -e PROD"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "express-handlebars": "^6.0.7",
+    "graphql": "^16.6.0",
+    "joi": "^17.8.3",
+    "minimist": "^1.2.8",
+    "mongoose": "^7.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
