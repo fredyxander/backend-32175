@@ -1,0 +1,8 @@
+show databases;
+create database adonisDB;
+use adonisDB;
+show tables;
+describe cupcakes;
+select * from cupcakes;
+
+insert into cupcakes (name,description, price) values ("fresa","cupcake de fresa",200),("cafe","cupcake de cafe",300);
